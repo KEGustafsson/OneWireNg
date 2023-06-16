@@ -527,6 +527,7 @@ public:
         int ret = MAX_CONV_TIME;
         int sh = (3 - (res - RES_9_BIT)) & 3;
         if (((ret >>= sh) << sh) < MAX_CONV_TIME) ret++;
+        ret += 100;
         return ret;
     }
 
